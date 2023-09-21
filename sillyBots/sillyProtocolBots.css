@@ -1,9 +1,32 @@
 .botGraphic {
     width:320px;
     height:190px;
-    background-color:red;
+    background-color:rgba(255, 0, 0, 0.142);
     z-index:-1;
     position:absolute;
     border-style:solid;
     border-width:1px;
+
 }
+
+#bot-A-graphic {
+    background-image:url('./sillyBot-images/bot-A.png');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:contain;
+}
+
+#bot-B-graphic {
+    background-image:url('./sillyBot-images/bot-B.png');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:contain;
+}
+
+#bot-C-graphic {
+    background-image:url('./sillyBot-images/bot-C.png');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:contain;
+}
+
