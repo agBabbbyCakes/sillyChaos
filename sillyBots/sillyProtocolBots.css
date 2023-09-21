@@ -45,5 +45,22 @@
   }
 
 .protocolChoiceWrap-B {
-    
+
+}
+
+.botCardItem-content {
+    display: flex;
+  }
+  
+  .botCardItem-col1,
+  .botCardItem-col2 {
+    flex: 1;
+    padding: 10px;
+  }
+
+
+.botCardItem-D {
+    max-width:400px;
+    border-style:solid;
+    border-color:white;
 }
