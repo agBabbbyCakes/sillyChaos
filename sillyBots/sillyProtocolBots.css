@@ -9,6 +9,13 @@
     
 }
 
+.botCardWrap-B {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: start;
+}
 
 
 #bot-A-graphic {
@@ -34,19 +41,43 @@
     background-size:contain;
 }
 
+.bot-all-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  padding:20px;
+}
 
 
-.botCardWrap-B {
+  .botCardContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
     justify-items: center;
     align-items: start;
+    margin: 0 auto;
+    max-width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+  
+  .botCardItem-A {
+    width: 100%;
+  }
+  
+  @media (min-width: 768px) { /* Adjust breakpoint as needed */
+    .botCardContainer {
+      flex-direction: row;
+      align-items:center;
+      justify-content: center;
+    }
+  
+    .botCardItem-col1,
+    .botCardItem-col2 {
+      width: 50%;
+    }
   }
 
-.protocolChoiceWrap-B {
-
-}
 
 .botCardItem-content {
     display: flex;
@@ -58,9 +89,44 @@
     padding: 10px;
   }
 
+  .protocolChoiceWrap-B {
+    margin-top:10px;
+    margin-bottom:10px;
 
-.botCardItem-D {
-    max-width:400px;
+  }
+  
+
+
+
+
+
+.botCardItem-wrap {
+    max-width:500px;
     border-style:solid;
     border-color:white;
+    border-width:1px;
+    transform: rotateY(0deg); /* Add 3D rotation */
+}
+
+.botCardItem-A:hover {
+    transform: rotateY(0); /* Rotate back on hover */
+}
+
+.bot-all-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.botCardContainer {
+  width: 60%;
+}
+
+.protocolGraphic {
+  width: 80%;
+  height: auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  mix-blend-mode: difference;
 }
