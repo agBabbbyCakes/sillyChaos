@@ -91,13 +91,24 @@
 }
 
 .protocolGraphic {
-  min-width: 90%;
-  max-width:400%;
+  min-width: 300px;
   height: auto;
 
   align-items:center;
-  
+  object-fit: cover;
   mix-blend-mode: difference;
+}
+
+.protocolGraphic {
+  width: 500px; /* Set the width */
+  height: 500px; /* Set the height */
+  background-color: rgba(255, 0, 0, 0.142);
+  z-index: -1;
+  position: relative;
+ 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; /* This will ensure that the image fits within the specified dimensions */
 }
 
 

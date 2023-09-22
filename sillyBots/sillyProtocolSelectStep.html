@@ -35,7 +35,7 @@
       <div class="botCardItem-col1">
      
         <div class="botCardItem-header">
-          <div class="botGraphic" id="bot-A-graphic"></div>
+          <div class="botGraphic" id="bot-A-graphic" data-img-url="./sillyBot-images/bot-A.png"></div>
           <p class="botText-Name">Bot Namez</p>
         </div>
         <div class="botCardItem-footer">
@@ -65,7 +65,7 @@
       <div class="botCardItem-col1">
      
         <div class="botCardItem-header">
-          <div class="botGraphic" id="bot-B-graphic"></div>
+          <div class="botGraphic" id="bot-B-graphic" data-img-url="./sillyBot-images/bot-B.png"></div>
           <p class="botText-Name">Bot Namez</p>
         </div>
         <div class="botCardItem-footer">
@@ -94,7 +94,7 @@
 </div>
 
 <div>
-  <img src="./sillyBot-images/bot-A.png" alt="protocol-1" class="protocolGraphic" />
+  <img src="./sillyBot-images/bot-B.png"  class="protocolGraphic" />
 </div>
   
 
@@ -111,11 +111,12 @@
 </div>
 
 <script>
-  document.querySelectorAll('.botCard').forEach(botCard => {
+document.querySelectorAll('.botCard').forEach(botCard => {
   botCard.addEventListener('mouseover', function() {
     const botId = this.id;
-    const selectedBotGraphic = document.getElementById('selectedBotGraphic');
-    selectedBotGraphic.src = `./sillyBot-images/${botId}.png`;
+    const botGraphic = document.getElementById(`${botId}-graphic`);
+    const protocolGraphic = document.querySelector('.protocolGraphic');
+    protocolGraphic.src = botGraphic.dataset.imgUrl;
   });
 });
 </script>
