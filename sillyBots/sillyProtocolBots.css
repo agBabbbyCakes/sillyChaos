@@ -66,12 +66,23 @@
 
   }
 
-
-
-  .bot-all-wrap {
+  .botCardItem-content {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
+  
+  .botCardItem-col1 {
+    align-self: flex-end;
+  }
+
+  .bot-all-wrap {
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  
   
 
 .botCardItem-wrap {
@@ -97,12 +108,10 @@
   align-items:center;
   object-fit: cover;
   mix-blend-mode: difference;
-}
 
-.protocolGraphic {
   width: 500px; /* Set the width */
   height: 500px; /* Set the height */
-  background-color: rgba(255, 0, 0, 0.142);
+  background-color: rgba(255, 242, 242, 0.142);
   z-index: -1;
   position: relative;
  
