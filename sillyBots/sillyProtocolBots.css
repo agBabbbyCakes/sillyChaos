@@ -9,15 +9,6 @@
     
 }
 
-.botCardWrap-B {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 20px;
-  justify-items: center;
-  align-items: start;
-}
-
-
 #bot-A-graphic {
     background-image:url('./sillyBot-images/bot-A.png');
     background-repeat:no-repeat;
@@ -41,52 +32,32 @@
     background-size:contain;
 }
 
-.bot-all-wrap {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 20px;
-  padding:20px;
-}
+
 
 
   .botCardContainer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 20px;
+    grid-gap: 10px;
     justify-items: center;
-    align-items: start;
     margin: 0 auto;
     max-width: 100%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.15);
     overflow: hidden;
 }
   
-  .botCardItem-A {
-    width: 100%;
-  }
   
-  @media (min-width: 768px) { /* Adjust breakpoint as needed */
-    .botCardContainer {
-      flex-direction: row;
-      align-items:center;
-      justify-content: center;
-    }
-  
-    .botCardItem-col1,
-    .botCardItem-col2 {
-      width: 50%;
-    }
-  }
 
 
 .botCardItem-content {
     display: flex;
+    min-width:300px;
+    background-color:rgba(255, 0, 0, 0.037);
   }
   
   .botCardItem-col1,
   .botCardItem-col2 {
     flex: 1;
-    padding: 10px;
+    padding: 5px;
   }
 
   .protocolChoiceWrap-B {
@@ -94,39 +65,70 @@
     margin-bottom:10px;
 
   }
+
+
+
+  .bot-all-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
   
 
-
-
-
-
 .botCardItem-wrap {
-    max-width:500px;
+    min-width:420px;
+    max-width:420px;
     border-style:solid;
-    border-color:white;
+    border-color:rgba(255, 255, 255, 0.104);
     border-width:1px;
-    transform: rotateY(0deg); /* Add 3D rotation */
+
 }
 
-.botCardItem-A:hover {
-    transform: rotateY(0); /* Rotate back on hover */
-}
 
-.bot-all-wrap {
-  display: flex;
-  justify-content: space-between;
-}
+
 
 .botCardContainer {
-  width: 60%;
+
 }
 
 .protocolGraphic {
-  width: 80%;
+  min-width: 90%;
+  max-width:400%;
   height: auto;
-  display:flex;
-  justify-content:center;
+
   align-items:center;
-  padding:20px;
+  
   mix-blend-mode: difference;
+}
+
+
+/*MOBILE */
+
+@media (min-width: 768px) { /* Adjust breakpoint as needed */
+  .botCardContainer {
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+  }
+
+  .botCardItem-col1,
+  .botCardItem-col2 {
+    width: 50%;
+  }
+}
+
+
+/* For tablets: */
+@media only screen and (max-width: 768px) {
+  .protocolGraphic {
+    min-width: 60%;
+    max-width:100%;
+  }
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 480px) {
+  .protocolGraphic {
+    min-width: 50%;
+    max-width:100%;
+  }
 }
